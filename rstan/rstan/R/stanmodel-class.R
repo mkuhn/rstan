@@ -532,7 +532,7 @@ setMethod("sampling", "stanmodel",
                   else message(msg)
                   mat <- as.matrix(tab)
                   colnames(mat) <- "count"
-                  print(mat)
+                  message(paste(capture.output(print(mat)), collapse = "\n"))
                   if (.Platform$OS.type == "windows") print(end)
                   else message(end)
                 }
